@@ -1,0 +1,13 @@
+.postsDiv{
+    height: 100%;
+    width: 100%;
+    padding:0px;
+    border: solid 2px #d3d3d3;
+    margin:1px;
+}
+
+@media (max-width: 769px) {
+   .postsDiv{
+    height : 50%;
+   }
+}
