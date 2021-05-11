@@ -19,6 +19,7 @@ mongoose.connect(dbURL,{useNewUrlParser:true,useUnifiedTopology:true})
         }).catch(err=>{
             console.log(err)
         })
+console.log("connect");
 const port= process.env.PORT || 5000
 app.listen(port,()=>{
     console.log(`listening at port ${port}`)
@@ -26,9 +27,9 @@ app.listen(port,()=>{
 //middleware
 app.use(bodyParser.json())
 
-app.get("/",(req,res)=>{
-    res.redirect("/post")
-})
+// app.get("/",(req,res)=>{
+//     res.redirect("/post")
+// })
 
 app.use("/post",postroute)
 
