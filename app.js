@@ -6,8 +6,6 @@ const path=require("path")
 
 app=express()
 
-
-
 //db connection 
 const dbURL="mongodb+srv://zahin:zahin1234@cluster0.tccbv.mongodb.net/MernStack?retryWrites=true&w=majority"
 
@@ -30,6 +28,7 @@ app.use(bodyParser.json())
 // app.get("/",(req,res)=>{
 //     res.redirect("/post")
 // })
+
 
 app.use("/post",postroute)
 
