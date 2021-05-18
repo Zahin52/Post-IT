@@ -20,10 +20,12 @@ const postPost=(req,res)=>{
     // })
     console.log(req.body)
     const post =new Post(req.body)
+    console.log(post);
 
     post.save()
         .then(result=>{
             res.json(result)
+            console.log(result);
         })
         .catch(err=>{
             console.log(err)
