@@ -40,7 +40,7 @@ function Login(props) {
                 
                 <div className="d-flex justify-content-center align-items-center " style={{height:"100vh",background:"#9969c7"}}>
                     
-                    <Form className="p-4 mx-4  mw-100 w-50 border rounded bg-white">
+                    <Form className="p-4 mx-4 respWidth border rounded bg-white">
                         <div className="d-flex justify-content-center align-items-center">
                             <strong style={{fontSize:"24px",fontFamily:"sans-serif"}}> Welcome to the login </strong>
                         </div>

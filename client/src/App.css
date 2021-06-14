@@ -1,3 +1,12 @@
 body{
     overflow: hidden;
 }
+.respWidth{
+    width: 50%;
+}
+
+@media (max-width:800px) {
+    .respWidth{
+        width: 100%;
+    }
+}

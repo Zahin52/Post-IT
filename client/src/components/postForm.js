@@ -40,7 +40,7 @@ function postForm(props) {
         >        
             {formik=>(
                 
-                <Form className="p-4 mx-4  mw-100 w-50 border rounded">
+                <Form className="p-4 mx-4  respWidth border rounded">
                     <div>
                         <items.Input label="Title" name="title" placeholder="title here "/>
                         <items.TextArea label="Body" name="body" placeholder="body here "/>

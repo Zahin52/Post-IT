@@ -43,12 +43,11 @@ function Reg(props) {
                     style={
                         {
                             height:"100vh",
-                            backgroundColor: "#A1BAFE",
-                            backgroundImage: "linear-gradient(315deg, #A1BAFE 0%, #8D5185 74%)"
+                            background:"#9969c7"
                         }
                 }>
                    
-                    <Form className="p-4 mx-4  mw-100 w-50 border rounded bg-white">
+                    <Form className="p-4 mx-4 respWidth border rounded bg-white">
                         <div className="d-flex justify-content-center align-items-center">
                             <strong style={{fontSize:"24px",fontFamily:"sans-serif"}}> Registration on going </strong>
                         </div>
