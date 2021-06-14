@@ -60,7 +60,7 @@ function Reg(props) {
                             <button className="btn btn-info m-2 w-100 text-white"  type="submit">Submit</button>
                             <p>New to Post-It? 
                                 <Link className="mx-2 " to="/">                                    
-                                        click to register                                     
+                                        click to login                                     
                                 </Link>
                                 
                             </p>
