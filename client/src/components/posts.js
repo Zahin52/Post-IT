@@ -1,10 +1,10 @@
 
-import {useState,useEffect,useRef} from "react"
+import {useState,useEffect} from "react"
 import axios from "axios"
 import "./posts.css"
 
 function Posts() {
-    const input=useRef()
+    // const input=useRef()
     const [data,SetData]=useState([])
     
     useEffect( ()=>{
@@ -20,27 +20,10 @@ function Posts() {
         set()
         
     },[data] )
-    // const logit=(data)=>{
-    //     console.log(input.current.outerHTML);
-    //     console.log(data);
-        
-    // }
-    
-    // const listClick=(e)=>{
-    //     console.log(e)
-    //     const target=e.target
-    //     console.log(target.id);
-    //     axios.get(`/post/${target.id}`)
-    //         .then(res=>{
-    //             console.log(res);
-    //             alert(res.data.body);
-    //         }).catch(err=>{
-    //             console.log(err); 
-    //         })
-    // }
     return (
         <div className=" postsDiv rounded">
-            <ul className="w-100 h-100 d-flex flex-wrap justify-content-between" ref={input} style={{padding:"10px","overflowY":"scroll",height:"100%"}}>
+
+            <ul className="w-100 h-100 d-flex flex-wrap justify-content-between" style={{padding:"10px","overflowY":"scroll",height:"100%"}}>
                 {
                 data.map((val)=>(
                     <li className="rounded"
@@ -72,6 +55,7 @@ function Posts() {
                     </li>
                 ))}
             </ul>
+            
         </div>
     );
 }

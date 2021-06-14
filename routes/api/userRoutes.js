@@ -1,5 +1,5 @@
 const express=require("express")
-const {Get_user,Post_user}=require("../../controller/authController")
+const {Get_user,Post_user}=require("../../controller/userController")
 const route=express.Router()
 
 //get user

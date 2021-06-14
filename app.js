@@ -1,15 +1,16 @@
 const express = require("express")
 const mongoose = require("mongoose")
-const bodyParser=require("body-parser")
 const postroute=require("./routes/api/postRoutes")
-const authroute=require("./routes/api/authRoutes")
+const userroute=require("./routes/api/userRoutes")
+const auth=require("./routes/api/auth")
+const config= require("config")
 const path=require("path")
 
 app=express()
 app.use(express.json())
 
 //db connection 
-const dbURL="mongodb+srv://zahin:zahin1234@cluster0.tccbv.mongodb.net/MernStack?retryWrites=true&w=majority"
+const dbURL=config.get('dbURL')
 
 mongoose.connect(dbURL,{useNewUrlParser:true,useUnifiedTopology:true})
         .then((res)=>{
@@ -29,7 +30,8 @@ app.listen(port,()=>{
 //     res.redirect("/post")
 // })
 
-app.use("/user",authroute)
+app.use("/user",userroute)
+app.use("/auth",auth)
 app.use("/post",postroute)
 
 

@@ -1,0 +1,4 @@
+{
+    "dbURL":"mongodb+srv://zahin:zahin1234@cluster0.tccbv.mongodb.net/MernStack?retryWrites=true&w=majority",
+    "jwtSecret" :"sometimes_along"
+}
