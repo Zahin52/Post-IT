@@ -42,7 +42,7 @@ function Login(props) {
                     
                     <Form className="p-4 mx-4 respWidth border rounded bg-white">
                         <div className="d-flex justify-content-center align-items-center">
-                            <strong style={{fontSize:"24px",fontFamily:"sans-serif"}}> Welcome to the login </strong>
+                            <strong style={{fontSize:"24px",fontFamily:"sans-serif"}}> Welcome to login </strong>
                         </div>
                         <div>
                             <items.Input label="Email"  name="email" placeholder="Email" />
@@ -51,8 +51,8 @@ function Login(props) {
                         <div className="d-flex flex-column justify-content-center align-items-center ">
                             <button className="btn btn-info m-2 w-100 text-white"  type="submit">Submit</button>
                             <p>New to Post-It? 
-                                <Link className="mx-2" to="/register">                                    
-                                        click to register                                     
+                                <Link className="mx-2" to="/signup">                                    
+                                        click to Sign-Up                                     
                                 </Link>
                                 
                             </p>

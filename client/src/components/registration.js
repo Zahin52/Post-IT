@@ -49,7 +49,7 @@ function Reg(props) {
                    
                     <Form className="p-4 mx-4 respWidth border rounded bg-white">
                         <div className="d-flex justify-content-center align-items-center">
-                            <strong style={{fontSize:"24px",fontFamily:"sans-serif"}}> Registration on going </strong>
+                            <strong style={{fontSize:"24px",fontFamily:"sans-serif"}}>Welcome to Sign-Up </strong>
                         </div>
                         <div>
                             <items.Input label="Name"  name="name" placeholder="Name" />
