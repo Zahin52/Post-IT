@@ -26,7 +26,8 @@ function Reg(props) {
             axios.post("/user",values)
                 .then(res=>{
                     console.log(res);
-                    window.location.href="/home"
+                    props.loginCB()
+                    props.history.push("/home")
                     resetForm()
 
                 }).catch(err=>{

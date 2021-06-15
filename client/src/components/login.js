@@ -25,7 +25,8 @@ function Login(props) {
                 .then(res=>{
 
                     console.log(res);
-                    window.location.href="/home"
+                    props.loginCB()
+                    props.history.push("/home")
                     resetForm()
 
                 }).catch(err=>{

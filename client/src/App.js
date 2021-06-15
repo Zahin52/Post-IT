@@ -1,4 +1,4 @@
-import React from 'react';
+import {React,useState,useEffect} from 'react';
 import './App.css';
 import Home from "./components/home"
 import Login from "./components/login"
@@ -14,19 +14,37 @@ import {
 
 
 function App() {
+    const [loginStatus,setLoginStatus]=useState(false)
+
+    const loginStat=()=>{
+        setLoginStatus(true)
+    }
     
     return(
         <Router>
             <Switch>
-                <Route exact path="/">
-                    <Login/>
-                </Route>
-                <Route path="/signup">
-                    <Registration />
-                </Route>
-                <Route path="/home">
-                    <Home/>
-                </Route>
+                <Route 
+                    exact 
+                    path="/"
+                    render={props=>(
+                        <Login {...props} loggeinStatus={loginStatus} loginCB={loginStat} />
+                    )}    
+                />
+                    
+                <Route 
+                    path="/signup"
+                    render={props=>(
+                        <Registration {...props} loggeinStatus={loginStatus} loginCB={loginStat} />
+                    )}   
+                />
+                
+                <Route 
+                    path="/home"  
+                    render={props=>(
+                        <Home {...props} loggeinStatus={loginStatus} />
+                    )}          
+                />
+
             </Switch>
         </Router>
         
