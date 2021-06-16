@@ -26,6 +26,7 @@ function Reg(props) {
             axios.post("/user",values)
                 .then(res=>{
                     console.log(res);
+                    localStorage.setItem("token",res.data.token)
                     props.loginCB()
                     props.history.push("/home")
                     resetForm()

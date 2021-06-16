@@ -8,9 +8,15 @@ function Posts() {
     const [data,SetData]=useState([])
     
     useEffect( ()=>{
+
+        const config={
+            headers:{
+                "x-auth-token": localStorage.getItem("token")
+            }
+        }
         
         const set=async ()=>{
-            const a= await axios.get("/post")
+            const a= await axios.get("/post",config)
             //console.log(a.data)
             SetData(a.data)
             //logit(a.data)
