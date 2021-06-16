@@ -19,7 +19,8 @@ const route=express.Router()
 route.get("/",getPost)
 
 //post
-route.post("/",postPost)
+//@private
+route.post("/",auth,postPost)
 
 //details
 

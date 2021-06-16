@@ -10,7 +10,14 @@ function Home(props) {
 
     if (props.loggeinStatus){
         return (
-            <div style={{height:"100vh"}} className="p-4 d-flex flex-column flex-md-row w-100 justify-content-around align-items-center">
+            <div 
+                style={
+                    {
+                        height:"100vh",
+                        background:"#9969c7"
+                    }} 
+                className="p-4 d-flex flex-column flex-md-row w-100 justify-content-around align-items-center"
+            >
                 <Posts />
                 <PostForm />
             </div>

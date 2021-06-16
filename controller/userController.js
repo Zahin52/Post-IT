@@ -6,16 +6,16 @@ const jwt= require("jsonwebtoken")
 
 //Get user data
 // @access public
-const Get_user=(req,res)=>{
-    //console.log(req);
-    userModel.find(req.body)
-            .then(result=>{
-                res.json(result)
-            })
-            .catch(err=>{
-                console.log(err)
-            })
-}
+// const Get_user=(req,res)=>{
+//     //console.log(req);
+//     userModel.find(req.body)
+//             .then(result=>{
+//                 res.json(result)
+//             })
+//             .catch(err=>{
+//                 console.log(err)
+//             })
+// }
 
 
 //Post user data
@@ -94,6 +94,5 @@ const Post_user=(req,res)=>{
 }
 
 module.exports={
-    Get_user,
     Post_user
 }

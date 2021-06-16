@@ -1,5 +1,5 @@
 const Post= require("../models/postmodel")
-const mongoose =require("mongoose")
+// const mongoose =require("mongoose")
 
 //get post 
 const getPost=(req,res)=>{
@@ -14,10 +14,7 @@ const getPost=(req,res)=>{
 }
 
 const postPost=(req,res)=>{
-    // const post= new Post({
-    //     title:"Added new one",
-    //     body:"Some thing you can change using trial and error"
-    // })
+    
     console.log(req.body)
     const post =new Post(req.body)
     console.log(post);
@@ -31,6 +28,7 @@ const postPost=(req,res)=>{
             console.log(err)
         })
 }
+
 const detailsPost=(req,res)=>{
     Post.findById(req.params.id)
         .then(result=>{

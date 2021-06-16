@@ -20,11 +20,12 @@ function Login(props) {
         initialValues={initials}
         validationSchema={validate}
         onSubmit={(values,{setSubmitting,resetForm})=>{
-            console.log(values);
+            // console.log(values);
             axios.post("/auth",values)
                 .then(res=>{
 
                     console.log(res);
+                    localStorage.setItem("token",res.data.token)
                     props.loginCB()
                     props.history.push("/home")
                     resetForm()

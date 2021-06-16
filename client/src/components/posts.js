@@ -20,6 +20,17 @@ function Posts() {
         set()
         
     },[data] )
+    // const reload=()=>{
+    //     const set=async ()=>{
+    //         const a= await axios.get("/post")
+    //         //console.log(a.data)
+    //         SetData(a.data)
+    //         //logit(a.data)
+            
+    //     }
+        
+    //     set()
+    // }
     return (
         <div className=" postsDiv rounded">
 
@@ -34,7 +45,8 @@ function Posts() {
                             width:"100%",
                             height:"30%",
                             padding:"2px",
-                            backgroundColor:" #17a589 ",
+                            backgroundColor:"white",
+                            color:"black",
                             border: "solid 2px black",
                             listStyle:"none",               
                             margin:"5px"
@@ -42,12 +54,13 @@ function Posts() {
                     >
 
                         <div id={val._id} className="container p-3 rounded h-100 ">
-                            <div className="border-bottom text-white ">
-                                <p>
-                                    Title : {val.title}
-                                </p> 
+                            <div className="border-bottom">
+                                    <strong>
+                                        Title : {val.title}
+                                    </strong> 
+                                
                             </div>
-                            <div className="text-white ">
+                            <div className="">
                                  {val.body}
                             </div>
                         </div>

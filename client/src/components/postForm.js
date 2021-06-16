@@ -25,7 +25,12 @@ function postForm(props) {
         validationSchema={validate}
         onSubmit={(values,{setSubmitting,resetForm})=>{
             console.log(values);
-            axios.post("/post",values)
+            const config={
+                headers:{
+                    "x-auth-token":localStorage.getItem("token")
+                }
+            }
+            axios.post("/post",values,config)
                 .then(res=>{
                     console.log(res);
                     resetForm()
@@ -40,8 +45,8 @@ function postForm(props) {
         >        
             {formik=>(
                 
-                <Form className="p-4 mx-4  respWidth border rounded">
-                    <div>
+                <Form className="p-4 mx-4 respWidth border rounded">
+                    <div className="text-white">
                         <items.Input label="Title" name="title" placeholder="title here "/>
                         <items.TextArea label="Body" name="body" placeholder="body here "/>
                     </div>
